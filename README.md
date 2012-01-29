@@ -1,3 +1,9 @@
+## Network Graph for AS3
+
+Simple network graph library that can solve Dikjstra and BFS search.
+In addition to solving the adjacency matrix for the graph.
+
+
 #### Code Sample
 
 	import com.furusystems.network.graph.*;

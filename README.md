@@ -35,7 +35,7 @@
 	trace("\n");
 
 	// Print the edges in the Graph
-	trace("--- Graph --- ");
+	trace("--- Graph Edges --- ");
 	trace(graph);
 	trace("\n");
 

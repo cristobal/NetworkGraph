@@ -53,20 +53,20 @@ In addition to solving the adjacency matrix for the graph.
 
 
 #### Output
-
+	
 	--- Dijkstra --
-	0,5,1
+	0,5,1	;from, to, weight
 	5,4,4
 	4,2,3
 	2,3,6
 
 	--- BFS --
-	0,5,-1
+	0,5,-1	;from, to, weight
 	5,4,-1
 	4,3,-1
 
-	--- Graph --- 
-	0,5,1
+	--- Graph Edges --- 
+	0,5,1 	;from, to, weight
 	0,1,13
 	5,4,4
 	5,2,9

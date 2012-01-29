@@ -18,7 +18,7 @@
 	graph.addEdge(44, 22, 3);
 	graph.addEdge(44, 33, 10);
 	
-	// Search using Dijkstra (weight can not be non-negative)
+	// Search using Dijkstra (weights can not be non-negative)
 	trace("--- Dijkstra --");
 	var path:Vector.<Edge> = GraphSearch.findShortestPathDijkstra(graph, 0, 33);
 	for each (var edge:Edge in path) {

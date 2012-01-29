@@ -55,17 +55,22 @@ In addition to solving the adjacency matrix for the graph.
 #### Output
 	
 	--- Dijkstra --
+	
 	0,5,1	;from, to, weight
 	5,4,4
 	4,2,3
 	2,3,6
 
+
 	--- BFS --
+	
 	0,5,-1	;from, to, weight
 	5,4,-1
 	4,3,-1
 
+
 	--- Graph Edges --- 
+	
 	0,5,1 	;from, to, weight
 	0,1,13
 	5,4,4
@@ -77,8 +82,10 @@ In addition to solving the adjacency matrix for the graph.
 	4,2,3
 	4,3,10
 
+
 	--- Adjacency Matrix --- 
 	// http://datastructures.itgo.com/graphs/adjmat.htm
+
 	\, 0, 1, 2, 3, 4, 5
 	0, 0, 1, 0, 0, 0, 1
 	1, 0, 0, 1, 0, 0, 1

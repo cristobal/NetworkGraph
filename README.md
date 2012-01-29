@@ -78,6 +78,7 @@ In addition to solving the adjacency matrix for the graph.
 	4,3,10
 
 	--- Adjacency Matrix --- 
+	// http://datastructures.itgo.com/graphs/adjmat.htm
 	\, 0, 1, 2, 3, 4, 5
 	0, 0, 1, 0, 0, 0, 1
 	1, 0, 0, 1, 0, 0, 1

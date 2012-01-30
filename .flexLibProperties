@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.furusystems.network.graph.Graph"/>
+    <classEntry path="com.furusystems.network.graph.Edge"/>
+    <classEntry path="com.furusystems.network.graph.TreeNode"/>
+    <classEntry path="com.furusystems.network.graph.GraphSearch"/>
+    <classEntry path="com.furusystems.network.graph.AdjacencyMatrix"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

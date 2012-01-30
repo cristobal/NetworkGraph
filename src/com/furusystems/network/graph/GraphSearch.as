@@ -140,7 +140,7 @@ package com.furusystems.network.graph
 		 * @param to
 		 */ 
 		public static function findShortestPathBFS(graph:Graph, from:int, to:int):Vector.<Edge>
-		{
+		{	
 			var adjacencyMatrix:AdjacencyMatrix = graph.getAdjacencyMatrix();
 			// there is no adjacencyMatrix
 			if (!adjacencyMatrix) {
@@ -159,6 +159,7 @@ package com.furusystems.network.graph
 			var u:TreeNode;
 			var w:TreeNode;
 			
+			
 			var vertices:Vector.<int>;
 			var vertex:int;
 			var found:Boolean = false;
@@ -166,18 +167,20 @@ package com.furusystems.network.graph
 			Q.push(v);
 			Mark[v.vertex] = true;
 			while (Q.length) {
-				u = Q.pop();
+				u = Q.shift();
 				vertices = adjacencyMatrix.getAdjacentVertices(u.vertex);
 				for (var i:int = 0, l:int = vertices.length; i < l; i++) {
 					vertex = vertices[i];
-					if (!(vertex in Mark)) {
-						w = new TreeNode(vertex, u);
+					w      = new TreeNode(vertex, u);
+					if (w.vertex == to) {
+						found = true;
+						break;
+					}
+					
+					
+					if (!(w.vertex in Mark)) {
 						Q.push(w);
 						Mark[w.vertex] = true;
-						if (w.vertex == to) {
-							found = true;
-							break;
-						}
 					}
 				}
 				
@@ -225,5 +228,4 @@ package com.furusystems.network.graph
 		}
 		
 	}
-	
 }

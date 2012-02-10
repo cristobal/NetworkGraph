@@ -9,14 +9,48 @@ package com.furusystems.network.graph
 	 */ 
 	public class Graph
 	{
+		//--------------------------------------------------------------------------
+		//
+		//  Class Constants
+		//
+		//--------------------------------------------------------------------------
+		
+		/**
+		 * @public
+		 */ 
+		public static const VERTICE_NONE:int = -1;
+		
+		//--------------------------------------------------------------------------
+		//
+		//  Constructor
+		//
+		//--------------------------------------------------------------------------
+		
+		/**
+		 * Constructor
+		 */
 		public function Graph()
 		{
 		}
+		
+		
+		//--------------------------------------------------------------------------
+		//
+		//  Variables
+		//
+		//--------------------------------------------------------------------------
 		
 		/**
 		 * @private
 		 */ 
 		private var _adjacencyMatrix:AdjacencyMatrix;
+		
+		
+		//--------------------------------------------------------------------------
+		//
+		//  Properties
+		//
+		//--------------------------------------------------------------------------
 		
 		/**
 		 * @private
@@ -30,6 +64,13 @@ package com.furusystems.network.graph
 		{
 			return _edges.concat(); // return shallow copy
 		}
+		
+		
+		//--------------------------------------------------------------------------
+		//
+		//  Methods
+		//
+		//--------------------------------------------------------------------------
 		
 		/**
 		 * Add edge
@@ -168,6 +209,11 @@ package com.furusystems.network.graph
 				from = edge.from;
 				to   = edge.to;
 				
+				if (to == VERTICE_NONE) {
+					// ignore single vertices
+					continue;
+				}
+				
 				x    = keys[to];
 				y    = keys[from];
 				
@@ -201,7 +247,7 @@ package com.furusystems.network.graph
 					lut[from] = true;
 				}
 				
-				if (!(to in lut)) {
+				if (!(to in lut) && to != VERTICE_NONE) { // do not add non existent vertice when we have a lonely vertice.
 					values.push(to);
 					lut[to] = true;
 				}
